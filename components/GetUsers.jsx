@@ -95,6 +95,7 @@ export default function GetUsers() {
         setName('');
         setEmail('');
         setPhone('');
+        setIsEdit(false);
 
     };
 
@@ -114,7 +115,7 @@ export default function GetUsers() {
     };
 
     return <>
-        <div>
+        <div className='forma'>
             <UserForm
                 name={name}
                 email={email}
@@ -122,7 +123,7 @@ export default function GetUsers() {
                 isEdit={isEdit}
                 handleChange={handleChange}
                 handleSubmit={isEdit ? handleSave : handleAdd} /></div>
-        <div>
+        <div className='container'>
             <UserList
                 users={users}
                 handleEdit={handleEdit}
