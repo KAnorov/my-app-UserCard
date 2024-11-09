@@ -2,9 +2,9 @@ export default function UserForm({ name, email, phone, isEdit, handleChange, han
 
     return <fieldset>
         <legend>{isEdit ? 'Редактирование пользователя' : 'Добавление пользователя'}</legend>
-        <input value={name} onChange={handleChange('name')} placeholder="Имя" /> <br />
-        <input value={email} onChange={handleChange('email')} placeholder="Email" /><br />
-        <input value={phone} onChange={handleChange('phone')} placeholder="Телефон" /><br />
+        <input placeholder="Имя" value={name} onChange={handleChange('name')} />
+        <input placeholder="Email" value={email} onChange={handleChange('email')} />
+        <input placeholder="Телефон" value={phone} onChange={handleChange('phone')} />
         <button onClick={handleSubmit}>{isEdit ? 'Сохранить' : 'Добавить'}</button>
     </fieldset>;
 }

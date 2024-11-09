@@ -12,8 +12,6 @@ main {
   max-width: 1800px;
   margin: auto;
   display: flex;
-  align-content: flex-start;
-  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: flex-start;
 }
@@ -21,16 +19,27 @@ main {
 .container {
   flex-grow: 1;
   background-color: whitesmoke;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .forma {
   background-color: ivory;
-  
+  margin-right: 20px;
+  padding: 20px;
+  max-width: 25rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
 }
 
 legend {
@@ -89,8 +98,25 @@ button:hover {
 .button {
   display: flex;
   width: max-content;
-  
+
 }
-.button > button {
+
+.button>button {
   margin: 10px;
+}
+
+.empty-message {
+  font-size: 1.5em;
+  color: #4CAF50;
+  text-align: center;
+}
+
+@media (max-width: 870px) {
+  main {
+    flex-direction: column;
+  }
+  .forma{
+    display: contents;
+  }
+  
 }
